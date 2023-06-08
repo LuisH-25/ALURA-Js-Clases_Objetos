@@ -19,7 +19,7 @@ https://ljcl79.medium.com/el-paradigma-de-la-programaci%C3%B3n-orientada-a-objet
 
 ## atributos privados
 #atributoPrivado: Solo disponible en metodos dentro de la clase.
-                                                 
+No pueden ser sobreescritos fuera de la clase.                                                
 ## Crear el packaje.json
 - Para poder utilizar las clases de forma modular, se necesita el archivo package.jon:
 npm init

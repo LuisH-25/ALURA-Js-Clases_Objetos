@@ -1,13 +1,15 @@
 export class CuentaCorriente
 {
+  cliente;
   numero;
-  #saldo;       //Atributo como privado
   agencia;
+  #saldo;       //Atributo como privado
 
   constructor(){
-    this.#saldo = 0;
+    this.cliente = null;  //Es un obj de tipo cliente
     this.numero = "";
     this.agencia = "";
+    this.#saldo = 0;
   }
 
   depositoEnCuenta(valor){
@@ -25,5 +27,9 @@ export class CuentaCorriente
   }
   verSaldo(){
     return this.#saldo;
+  }
+  transferirParaCuenta(valor, cuentaDestino){
+    this.retirarDeCuenta(valor);
+    cuentaDestino.depositoEnCuenta(valor);
   }
 }
